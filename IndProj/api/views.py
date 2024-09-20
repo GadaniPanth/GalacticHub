@@ -1,7 +1,9 @@
 from rest_framework import viewsets, permissions, status
+from django.http import JsonResponse
 from rest_framework.response import Response
-from .serializers import PostSerializer, CommentSerializer, LikeSerializer, MyModelsSerializer
-from .models import Post, Comment, Like, MyModels
+from rest_framework.decorators import api_view
+from .serializers import *
+from .models import *
 
 class MyModelsViewSet(viewsets.ModelViewSet):
     queryset = MyModels.objects.all()
@@ -27,38 +29,11 @@ class MyModelsViewSet(viewsets.ModelViewSet):
         self.perform_destroy(instance)
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-class PostViewSet(viewsets.ModelViewSet):
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-
-    def perform_create(self, serializer):
-        serializer.save(created_by=self.request.user)
-
-class CommentViewSet(viewsets.ModelViewSet):
-    queryset = Comment.objects.all()
-    serializer_class = CommentSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
-
-    def destroy(self, request, *args, **kwargs):
-        comment = self.get_object()
-        if comment.user != request.user:
-            return Response({'detail': 'You do not have permission to delete this comment.'}, status=status.HTTP_403_FORBIDDEN)
-        return super().destroy(request, *args, **kwargs)
-
-class LikeViewSet(viewsets.ModelViewSet):
-    queryset = Like.objects.all()
-    serializer_class = LikeSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
-
-    def destroy(self, request, *args, **kwargs):
-        like = self.get_object()
-        if like.user != request.user:
-            return Response({'detail': 'You do not have permission to remove this like.'}, status=status.HTTP_403_FORBIDDEN)
-        return super().destroy(request, *args, **kwargs)
+@api_view(['GET'])
+def user_details(request):
+    user = request.user
+    return JsonResponse({
+        'username': user.username,
+        'email': user.email,
+        # Add other user details as needed
+    })

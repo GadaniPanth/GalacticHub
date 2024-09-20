@@ -14,6 +14,10 @@ export default function Navbar({ drawerWidth, logo }) {
   const menuOpen = () => setOpen(true);
   const menuClose = () => setOpen(false);
   
+  const handleGoogle = ()=>{
+    window.location.href = 'http://localhost:8000/accounts/google/login/';
+  }
+
   return (
     <div className='p-5 pr-0 flex navbar justify-between align-center items-center relative z-50'>
       <div className='App-logo w-56 h-fit'>
@@ -24,6 +28,7 @@ export default function Navbar({ drawerWidth, logo }) {
         {/* <Link to='/' className='hover:text-violet-600 transition ease-in-out duration-300' onClick={menuClose}><HomeIcon />Home</Link> */}
         <Link to='/community' className='hover:text-violet-600 transition ease-in-out duration-300' ><ChatIcon />Community</Link>
         <Link to='/login' className='hover:text-violet-600 transition ease-in-out duration-300' ><LoginIcon />Log-In</Link>
+        <button onClick={handleGoogle} className='hover:text-violet-600 transition ease-in-out duration-300'>Google Login</button>
         {/* <Link to='/signup' className='hover:text-violet-600 transition ease-in-out duration-300' ><AppRegistrationIcon />Sign-Up</Link> */}
       </div>
       {/* Mobile Menu */}
@@ -45,6 +50,7 @@ export default function Navbar({ drawerWidth, logo }) {
             {/* <Link to='/' onClick={menuClose}><HomeIcon />Home</Link> */}
             <Link to='/community' onClick={menuClose}><ChatIcon />Community</Link>
             <Link to='/login' onClick={menuClose}><LoginIcon />Log-In</Link>
+            <button onClick={handleGoogle} className='hover:text-violet-600 transition ease-in-out duration-300'>Google Login</button>
             {/* <Link to='/signup' onClick={menuClose}><AppRegistrationIcon />Sign-Up</Link> */}
           </div>
         </>
