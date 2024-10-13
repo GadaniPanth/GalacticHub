@@ -78,7 +78,7 @@ function App() {
   return (<>
       {loading ? (
         <Loading />
-      ) : (<div className='h-screen w-screen bg-black text-white overflow-x-hidden'>
+      ) : (<div className='h-screen w-full bg-black text-white overflow-x-hidden'>
         {/* <Navbar 
           drawerWidth={200} 
           content={
@@ -96,9 +96,9 @@ function App() {
         <div className='content z-0'>
           <Routes>
             <Route path='' element={<Home />}/>
-            <Route path='/community' element={<Community />}/>
+            <Route path='/news' element={<Community />}/>
             {/* <Route path='/space' element={<Space />}/> */}
-            <Route path='/spacesingle' element={<SpaceSingle />}/>
+            <Route path='/space' element={<SpaceSingle />}/>
             <Route path='/login' element={<Login />}/>
             <Route path='/signup' element={<Signup />}/>
             {/* <Route path='/spacealt' element={<SpaceAlt />}/> */}

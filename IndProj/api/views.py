@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .serializers import *
 from .models import *
+from .webscrape import web
 
 class MyModelsViewSet(viewsets.ModelViewSet):
     queryset = MyModels.objects.all()
@@ -37,3 +38,5 @@ def user_details(request):
         'email': user.email,
         # Add other user details as needed
     })
+
+# web()

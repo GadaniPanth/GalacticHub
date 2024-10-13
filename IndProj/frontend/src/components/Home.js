@@ -49,8 +49,7 @@ const Home = () => {
         e.preventDefault();
         setTimeout(() => {
             setLoading(false);
-            // navigate('/space');
-            navigate('/spacesingle');
+            navigate('/space');
         }, 4000);
 
         if (modelRef.current) {
@@ -138,7 +137,7 @@ const Home = () => {
                     <h1 className='text-[10vw] txt txt-gh absolute top-[25vh] ml-[25vw] text-transparent bg-clip-text bg-gradient-to-br from-black via-orange-500 to-black'>GalacticHub</h1>
                     <div>
                         {/* <Link to='/space' onClick={handelClick}> */}
-                        <Link to='/spacesingle' onClick={handelClick}>
+                        <Link to='/space' onClick={handelClick}>
                             <button className='text-[1.5vw] btn btn-as pointer-events-auto select-auto flex absolute w-[15vw] h-auto space-x-2 items-center top-[85vh] ml-[65vw] p-2 border rounded-lg border-solid border-violet-800 hover:bg-violet-900 transition-all active:bg-violet-800 hover:border-t-8 hover:border-l-8 duration-300 ease-linear'>
                                 <RocketLaunchTwoToneIcon /><h1>About Space</h1>
                             </button>

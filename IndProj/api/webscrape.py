@@ -107,10 +107,11 @@ def update_database():
         )
 
 # Run the web scraping and database update
-try:
-    forSun()
-    forPlanet()
-    update_database()
-    print("Web scraping completed and database updated.")
-except:
-    print("Sorry!Unknown Error with DB")
+def web():
+    try:
+        forSun()
+        forPlanet()
+        update_database()
+        print("Web scraping completed and database updated.")
+    except:
+        print("Sorry!Unknown Error with DB")
