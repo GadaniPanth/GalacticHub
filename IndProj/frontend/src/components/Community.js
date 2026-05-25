@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-// const NASA_API_KEY = 'ksjpq40PnZJmonXhEse335B0p5uJY5gTBvSU3nj1'; // Replace with your NASA API key
-const NASA_API_KEY = 'Your_key'; // Replace with your NASA API key
+const NASA_API_KEY = process.env.REACT_APP_NASA_API_KEY; // Replace with your NASA API key
 
 const Community = () => {
   const [apodData, setApodData] = useState([]);
