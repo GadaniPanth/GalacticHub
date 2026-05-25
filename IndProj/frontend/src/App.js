@@ -7,7 +7,7 @@ import Home from './components/Home';
 // import Create from './components/Create';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
-import Community from './components/Community'
+// import Community from './components/Community'
 import Signup from './components/Signup'
 // import Space from './components/Space'
 import SpaceSingle from './components/SpaceSingle'
@@ -96,7 +96,7 @@ function App() {
         <div className='content z-0'>
           <Routes>
             <Route path='' element={<Home />}/>
-            <Route path='/news' element={<Community />}/>
+            // <Route path='/news' element={<Community />}/>
             {/* <Route path='/space' element={<Space />}/> */}
             <Route path='/space' element={<SpaceSingle />}/>
             <Route path='/login' element={<Login />}/>
