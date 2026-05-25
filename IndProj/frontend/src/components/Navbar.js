@@ -4,8 +4,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 // import HomeIcon from '@mui/icons-material/Home';
 import CloseIcon from '@mui/icons-material/Close';
 import ChatIcon from '@mui/icons-material/Chat';
-import LoginIcon from '@mui/icons-material/Login';
-import RocketLaunchTwoToneIcon from '@mui/icons-material/RocketLaunchTwoTone';
+// import LoginIcon from '@mui/icons-material/Login';
+// import RocketLaunchTwoToneIcon from '@mui/icons-material/RocketLaunchTwoTone';
 // import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 
 export default function Navbar({ drawerWidth, logo }) {
@@ -14,9 +14,9 @@ export default function Navbar({ drawerWidth, logo }) {
   const menuOpen = () => setOpen(true);
   const menuClose = () => setOpen(false);
   
-  const handleGoogle = ()=>{
-    window.location.href = 'http://localhost:8000/accounts/google/login/';
-  }
+  // const handleGoogle = ()=>{
+  //   window.location.href = 'http://localhost:8000/accounts/google/login/';
+  // }
 
   return (
     <div className='p-5 pr-0 flex navbar justify-between align-center items-center relative z-50'>
