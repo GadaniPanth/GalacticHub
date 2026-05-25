@@ -23,7 +23,7 @@ export default function Navbar({ drawerWidth, logo }) {
       <div className='App-logo w-56 h-fit'>
         <Link to='/'>{logo}</Link>
       </div>
-      <div className='content justify-evenly w-[50%] items-center sm:flex hidden space-x-2 text-violet-400'>
+      <div className='content justify-end w-[50%] items-center sm:flex hidden space-x-2 text-violet-400'>
         {/* <Link to='/space' className='hover:text-violet-600 transition ease-in-out duration-300'><RocketLaunchTwoToneIcon />Space</Link> */}
         {/* <Link to='/' className='hover:text-violet-600 transition ease-in-out duration-300' onClick={menuClose}><HomeIcon />Home</Link> */}
         <Link to='/news' className='hover:text-violet-600 transition ease-in-out duration-300' ><ChatIcon />News</Link>
