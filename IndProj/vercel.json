@@ -1,4 +1,6 @@
 {
+  "version": 2,
+
   "builds": [
     {
       "src": "backend/wsgi.py",
@@ -20,8 +22,12 @@
     },
 
     {
+      "handle": "filesystem"
+    },
+
+    {
       "src": "/(.*)",
-      "dest": "/frontend/index.html"
+      "dest": "/index.html"
     }
   ]
 }
