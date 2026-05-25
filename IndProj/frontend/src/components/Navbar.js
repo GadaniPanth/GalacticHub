@@ -19,7 +19,7 @@ export default function Navbar({ drawerWidth, logo }) {
   // }
 
   return (
-    <div className='p-5 pr-0 flex navbar justify-between align-center items-center relative z-50'>
+    <div className='p-5 flex navbar justify-between align-center items-center relative z-50'>
       <div className='App-logo w-56 h-fit'>
         <Link to='/'>{logo}</Link>
       </div>
