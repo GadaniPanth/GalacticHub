@@ -1,24 +1,28 @@
 {
-  "version": 2,
-
-  "buildCommand": "cd frontend && npm install && npm run build",
-
-  "outputDirectory": "frontend/build",
-
-  "rewrites": [
+  "builds": [
     {
-      "source": "/api/(.*)",
-      "destination": "/backend/wsgi.py"
+      "src": "backend/wsgi.py",
+      "use": "@vercel/python"
     },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     }
   ],
-
-  "functions": {
-    "backend/wsgi.py": {
-      "runtime": "python3.12"
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/wsgi.py"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/$1"
     }
-  }
+  ]
 }
