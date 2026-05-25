@@ -8,17 +8,15 @@
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "build"
       }
     }
   ],
+
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "backend/wsgi.py"
-    },
-    {
-      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
