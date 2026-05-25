@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 // import HomeIcon from '@mui/icons-material/Home';
 import CloseIcon from '@mui/icons-material/Close';
-import ChatIcon from '@mui/icons-material/Chat';
+// import ChatIcon from '@mui/icons-material/Chat';
 // import LoginIcon from '@mui/icons-material/Login';
 // import RocketLaunchTwoToneIcon from '@mui/icons-material/RocketLaunchTwoTone';
 // import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
@@ -26,7 +26,7 @@ export default function Navbar({ drawerWidth, logo }) {
       <div className='content justify-evenly w-[50%] items-center sm:flex hidden space-x-2 text-violet-400'>
         {/* <Link to='/space' className='hover:text-violet-600 transition ease-in-out duration-300'><RocketLaunchTwoToneIcon />Space</Link> */}
         {/* <Link to='/' className='hover:text-violet-600 transition ease-in-out duration-300' onClick={menuClose}><HomeIcon />Home</Link> */}
-        <Link to='/news' className='hover:text-violet-600 transition ease-in-out duration-300' ><ChatIcon />News</Link>
+        // <Link to='/news' className='hover:text-violet-600 transition ease-in-out duration-300' ><ChatIcon />News</Link>
         {/* <Link to='/space' className='hover:text-violet-600 transition ease-in-out duration-300' ><RocketLaunchTwoToneIcon />Space</Link> */}
         {/* <Link to='/login' className='hover:text-violet-600 transition ease-in-out duration-300' ><LoginIcon />Log-In</Link> */}
         {/* <button onClick={handleGoogle} className='hover:text-violet-600 transition ease-in-out duration-300'>Google Login</button> */}
