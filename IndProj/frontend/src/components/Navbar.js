@@ -49,7 +49,7 @@ export default function Navbar({ drawerWidth, logo }) {
             </div>
             {/* <Link to='/space' className='hover:text-violet-600 transition ease-in-out duration-300' onClick={menuClose}><RocketLaunchTwoToneIcon />Space</Link> */}
             {/* <Link to='/' onClick={menuClose}><HomeIcon />Home</Link> */}
-            <Link to='/news' onClick={menuClose}><ChatIcon />News</Link>
+            // <Link to='/news' onClick={menuClose}><ChatIcon />News</Link>
             {/* <Link to='/space' onClick={menuClose}><ChatIcon />Space</Link> */}
             {/* <Link to='/login' onClick={menuClose}><LoginIcon />Log-In</Link> */}
             {/* <button onClick={handleGoogle} className='hover:text-violet-600 transition ease-in-out duration-300'>Google Login</button> */}
