@@ -9,7 +9,7 @@ import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Community from './components/Community'
 import Signup from './components/Signup'
-import Space from './components/Space'
+// import Space from './components/Space'
 import SpaceSingle from './components/SpaceSingle'
 import Loading from './components/Loading';
 // import SpaceAlt from './components/SpaceAlt';
