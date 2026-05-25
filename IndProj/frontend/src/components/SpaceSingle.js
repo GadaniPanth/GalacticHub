@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useGLTF, OrbitControls, Stars, Stage, PositionPoint } from '@react-three/drei';
+// import { useGLTF, OrbitControls, Stars, Stage, PositionPoint } from '@react-three/drei';
+import { useGLTF, OrbitControls, Stars, Stage } from '@react-three/drei';
 import AxiosInstance from './Axios';
 import ClearIcon from '@mui/icons-material/Clear';
 
